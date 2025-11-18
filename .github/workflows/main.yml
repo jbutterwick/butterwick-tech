@@ -15,13 +15,6 @@ jobs:
       uses: actions/setup-node@v6
       with:
         node-version: 24
-        cache: 'yarn'
-
-    - run: yarn
-      name: Install dependencies
-
-    - run: yarn build
-      name: Build
 
     - name: Get current date
       id: date
