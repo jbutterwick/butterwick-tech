@@ -1,3 +1,3 @@
 # butterwick.tech
-My personal website
+My personal website and resume live here
 
