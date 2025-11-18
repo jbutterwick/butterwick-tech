@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6-beta
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
-        node-version: '22.x'
+        node-version: 24
         cache: 'yarn'
 
     - run: yarn
@@ -43,7 +43,7 @@ jobs:
         tag: v${{ steps.date.outputs.date }}-${{ github.sha }}
 
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         name: Resume ${{ steps.date.outputs.date }}
         tag_name: v${{ steps.date.outputs.date }}-${{ github.sha }}
