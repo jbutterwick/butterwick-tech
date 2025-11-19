@@ -22,7 +22,7 @@ jobs:
       uses: lucafaggianelli/html-to-pdf-action@master
       with:
         baseUrl: dist
-        htmlFile: src/pages/resume.html
+        htmlFile: ./src/pages/resume.html
         outputFile: ./dist/resume-${{ steps.date.outputs.date }}.pdf
         pdfOptions: '{"format": "A4", "printBackground": true}'
 
