@@ -3,6 +3,8 @@ name: Export resume to PDF
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'src/pages/resume.html'
 
 jobs:
   export-to-pdf:
