@@ -5,83 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="207dc1c3-6169-44a2-bd58-cecda645ae6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/about/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/blog/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/blog/calgary-corn-city/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/now/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/projects/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/projects/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/projects/prairie/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/now.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/processed_images/banner.e2838d5c2f263d88.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/now.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/.github/workflows/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/config.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/about/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/about/me.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/another-post.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/blog-with-image/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/blog-with-image/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/no-summary.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/blog/what-is-zola.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/_index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-1/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-2/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-2/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-3/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-3/image2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/content/projects/project-3/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/blendedindex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/featured_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/featured_image_extended.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/img_-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/img_0.1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/img_0.2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/img_default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/index_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/project.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/project_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/projects.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/pics/projects_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/_syntax-theme-dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/_syntax-theme-light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/auto.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/dark.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/sass/light.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/static/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/static/syntax-theme-dark.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/static/syntax-theme-light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/anchor-link.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/categories/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/categories/single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/macros/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/macros/social.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/shortcodes/img.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/tags/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/templates/tags/single.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/prairie/theme.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oldsrc/pages/now.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/now.html" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/corn.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/corn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/subsistencegarden.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/subsistencegarden.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +76,9 @@
       <recent name="$PROJECT_DIR$/content/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/content" />
     </key>
   </component>
@@ -157,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768405510169</updated>
       <workItem from="1768405511416" duration="883000" />
-      <workItem from="1768491358970" duration="12660000" />
+      <workItem from="1768491358970" duration="14049000" />
     </task>
     <servers />
   </component>
