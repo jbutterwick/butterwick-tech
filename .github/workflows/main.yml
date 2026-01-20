@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - './src/pages/resume.html'
+      - '../../content/resume.html'
 
 jobs:
   export-to-pdf:

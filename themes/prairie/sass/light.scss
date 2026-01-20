@@ -1,0 +1,23 @@
+@use "syntax-theme-light";
+
+@mixin theme($theme: light) {
+    --background-color: rgba(92.09%,89.35%,88.07%,1.000);
+    --header-background-color: rgba(96.09%,93.23%,91.89%,1.000);
+    --text-color: rgba(28.29%,27.52%,27.65%,1.000);
+    --text-accent-color: ;
+    --border-color: rgba(0.00%,30.38%,42.50%,1.000);
+    --link-color: rgba(42.30%,39.92%,52.41%,1.000);
+    --link-hover-color: rgba(35.32%,44.80%,34.79%,1.000);
+    --link-hover-line-color: rgba(64.39%,58.22%,87.00%,1.000);
+    --icon-hover-color: var(--link-hover-color);
+    --icon-color: var(--text-color);
+    --code-background: rgba(0.00%,30.38%,42.50%,1.000);
+    --table-header-background-color: var(--header-background-color);
+    --mark-bg-color: rgba(97.01%,79.68%,27.43%,1.000);
+    --mark-text-color: rgba(24.25%,23.63%,23.93%,1.000);
+}
+
+:root {
+    @include theme($theme: light);
+    @include syntax-theme-light.light;
+}

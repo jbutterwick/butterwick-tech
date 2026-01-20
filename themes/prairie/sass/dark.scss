@@ -1,0 +1,27 @@
+@use "syntax-theme-dark";
+
+@mixin theme($theme: dark) {
+    --background-color: rgba(19.69%,24.67%,27.52%,1.000);
+    --header-background-color: rgba(14.97%,22.43%,25.57%,1.000);
+    --text-color: rgba(78.92%,80.56%,84.46%,1.000);
+    --text-accent-color: rgba(50.86%,63.72%,51.71%,1.000);
+    --border-color: rgba(14.97%,22.43%,25.57%,1.000);
+    --link-color: rgba(58.94%,57.45%,76.26%,1.000);
+    --link-hover-color: rgba(50.86%,63.72%,51.71%,1.000);
+    --link-hover-line-color: rgba(54.20%,80.09%,52.47%,1.000);
+    --icon-hover-color: var(--link-hover-color);
+    --icon-color: var(--text-color);
+    --code-background: rgba(14.97%,22.43%,25.57%,1.000);
+    --table-header-background-color: var(--header-background-color);
+    --mark-bg-color: rgba(65.79%,58.53%,39.42%,1.000);
+    --mark-text-color: rgba(87.45%,88.62%,92.78%,1.000);
+}
+
+:root {
+    @include theme($theme: dark);
+    @include syntax-theme-dark.dark;
+}
+
+.img-dark {
+    filter: invert(100%) hue-rotate(180deg);
+}

@@ -1,0 +1,74 @@
+base_url = "https://butterwick.tech"
+compile_sass = true
+build_search_index = true
+theme = "prairie"
+
+[extra]
+
+env = "ZOLA_ENV"
+color_mode = "auto"
+menu_items = [
+    { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
+    { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
+    { name = "about", url = "$LANG_BASE_URL/about"},
+    { name = "now", url = "$LANG_BASE_URL/now" },
+    { name = "resume", url = "https://www.butterwick.tech/src/pages/resume.html" },
+]
+
+[extra.images]
+# Width defined in pixels
+max_width = 2500
+
+# Open Graph Protocol objects. See: https://ogp.me/
+[extra.ogp]
+locale = "en_US"
+first_name = "Jordan"
+last_name = "Butterwick"
+gender = "male"
+username = "jbutterwick"
+
+# Footer social links; full options listed in macros/social.html
+[extra.social]
+email = "jordan@butterwick.tech"
+linkedin = "jbutterwick"
+github = "jbutterwick"
+
+# CDN links
+[extra.cdn]
+font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+
+
+[languages]
+
+[languages.en]
+title = "butterwick.tech"
+description = "homepage of butterwick.tech"
+generate_feeds = true
+feed_filenames = ["atom.xml", "rss.xml"]
+taxonomies = [
+    { name = "tags", feed = true, lang = "en" },
+    { name = "categories", feed = true, lang = "en" },
+]
+
+[languages.en.translations]
+projects = "Projects"
+blog = "Blog"
+about = "About"
+now = "Now"
+resume = "Résumé"
+recent_projects = "Recent Updates"
+more_projects = "More Updates"
+recent_blog_posts = "Recent Blog Posts"
+more_blog_posts = "More blog posts"
+tag = "Tag"
+tags = "Tags"
+to_all_tags = "To all tags"
+category = "Category"
+categories = "Categories"
+to_all_categories = "To all categories"
+view_by = "View by"
+other = "Other"
+minute = "min"
+prev_page = "To newer posts"
+next_page = "To older posts"
+date_format = "%Y-%m-%d"
