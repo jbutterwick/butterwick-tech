@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="207dc1c3-6169-44a2-bd58-cecda645ae6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/oldsrc/pages/now.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/content/resume.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/now.html" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/corn.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/corn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/links.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/subsistencegarden.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/subsistencegarden.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/input.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/resume.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/resume.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldsrc/pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/oldsrc/pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldsrc/styles/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oldsrc/styles/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/search_index.en.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/search_index.en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +69,7 @@
       <recent name="$PROJECT_DIR$/content/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static" />
       <recent name="$PROJECT_DIR$/src/pages" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/pages" />
@@ -97,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768405510169</updated>
       <workItem from="1768405511416" duration="883000" />
-      <workItem from="1768491358970" duration="14049000" />
+      <workItem from="1768491358970" duration="15872000" />
     </task>
     <servers />
   </component>

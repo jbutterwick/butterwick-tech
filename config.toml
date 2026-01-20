@@ -12,7 +12,7 @@ menu_items = [
     { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
     { name = "about", url = "$LANG_BASE_URL/about"},
     { name = "now", url = "$LANG_BASE_URL/now" },
-    { name = "resume", url = "https://www.butterwick.tech/src/pages/resume.html" },
+    { name = "resume", url = "$LANG_BASE_URL/resume.html" },
 ]
 
 [extra.images]
