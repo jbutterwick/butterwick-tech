@@ -1,0 +1,9 @@
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400|calistoga:400|chonburi:400);
+
+@import "tailwindcss";
+@page { margin: 1cm }
+@theme {
+    --font-calistoga: Calistoga, cursive;
+    --font-abril: Abril Fatface, cursive;
+    --font-chonburi: Chonburi, cursive;
+}
