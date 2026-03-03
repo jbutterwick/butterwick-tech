@@ -7,7 +7,16 @@
       <generator>Zola</generator>
       <language>en</language>
       <atom:link href="https://butterwick.tech/categories/software/rss.xml/" rel="self" type="application/rss+xml"/>
-      <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
+      <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>frishy.net</title>
+          <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://butterwick.tech/projects/frishy-net/</link>
+          <guid>https://butterwick.tech/projects/frishy-net/</guid>
+          <description xml:base="https://butterwick.tech/projects/frishy-net/">&lt;h1 id=&quot;frishy-net&quot;&gt;frishy.net&lt;&#x2F;h1&gt;
+&lt;p&gt;frishy.net is a fish data logger for anglers with community features.&lt;&#x2F;p&gt;</description>
+      </item>
       <item>
           <title>Prairie Zola Template</title>
           <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>

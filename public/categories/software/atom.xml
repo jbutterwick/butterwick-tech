@@ -5,8 +5,28 @@
     <link rel="self" type="application/atom+xml" href="https://butterwick.tech/categories/software/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://butterwick.tech"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-01-11T00:00:00+00:00</updated>
+    <updated>2026-02-03T00:00:00+00:00</updated>
     <id>https://butterwick.tech/categories/software/atom.xml</id>
+    <entry xml:lang="en">
+        <title>frishy.net</title>
+        <published>2026-02-03T00:00:00+00:00</published>
+        <updated>2026-02-03T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://butterwick.tech/projects/frishy-net/"/>
+        <id>https://butterwick.tech/projects/frishy-net/</id>
+        
+        <summary type="html">&lt;h1 id=&quot;frishy-net&quot;&gt;frishy.net&lt;&#x2F;h1&gt;
+&lt;p&gt;frishy.net is a fish data logger for anglers with community features.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
     <entry xml:lang="en">
         <title>Prairie Zola Template</title>
         <published>2026-01-11T00:00:00+00:00</published>
