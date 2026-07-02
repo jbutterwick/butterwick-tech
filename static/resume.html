@@ -16,11 +16,16 @@
   <title>Jordan Butterwick — Resume</title>
 </head>
 
-<body class="grid min-h-screen place-items-center bg-orange-100">
-  <main class="page font-albert hyphens-manual m-5 h-[297mm] w-[210mm] overflow-hidden rounded-md bg-white p-2 shadow-lg print:m-0 print:p-0 print:h-screen print:w-screen print:rounded-none print:shadow-none">
+<body class="grid min-h-screen place-items-center bg-orange-100 print:bg-white">
+  <button onclick="window.print()"
+    class="fixed top-4 right-4 print:hidden bg-green-700 hover:bg-green-800 text-white text-sm px-4 py-2 rounded-md shadow-lg cursor-pointer transition duration-100 ease-in">
+    <i class="fas fa-file-pdf"></i>
+    Save as PDF
+  </button>
+  <main class="page font-albert hyphens-manual m-5 min-h-[297mm] w-[210mm] max-w-full rounded-md bg-white p-2 shadow-lg print:m-0 print:p-0 print:w-screen print:rounded-none print:shadow-none">
     <!-- Page -->
     <div class="
-          print:p-2
+          print:p-6
           p-5
           mx-auto
           max-w-3xl

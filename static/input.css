@@ -1,7 +1,14 @@
 @import url(https://fonts.bunny.net/css?family=abril-fatface:400|albert-sans:400,600,700);
 
 @import "tailwindcss";
-@page { margin: 1cm }
+/* zero page margin so browsers have nowhere to draw print headers/footers;
+   the page padding comes from the content's print:p-10 instead */
+@page { size: A4; margin: 0 }
+/* ponytail: uniform 7% print shrink instead of per-section margin surgery;
+   bump back toward 1 if content ever gets shorter */
+@media print {
+    .page { zoom: 0.93 }
+}
 @theme {
     --font-abril: Abril Fatface, cursive;
     --font-albert: Albert Sans, sans-serif;
