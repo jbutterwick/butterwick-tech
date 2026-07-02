@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="preconnect" href="https://fonts.bunny.net">
-  <link href="https://fonts.bunny.net/css?family=abril-fatface:400|calistoga:400|chonburi:400" rel="stylesheet" />
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link href="https://fonts.bunny.net/css?family=abril-fatface:400|albert-sans:400,600,700" rel="stylesheet" />
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
   <script src="https://kit.fontawesome.com/123eb529e8.js" crossorigin="anonymous"></script>
   <link href="output.css" rel="stylesheet" />
   <title>Jordan Butterwick — Resume</title>
@@ -25,8 +25,6 @@
           mx-auto
           max-w-3xl
           print:max-w-3xl
-          md:max-w-letter md:h-letter
-          xsm:p-8
           sm:p-9
           md:p-5
           bg-white
@@ -34,7 +32,7 @@
       <!-- Header -->
       <header class="
             flex
-            row-gap-3
+            gap-y-3
             flex-row flex-wrap
             items-center
             mb-5
@@ -54,29 +52,29 @@
         <section class="print:col-span-2 col-span-3 md:col-span-2 mt-8 first:mt-0">
           <!-- Profile -->
           <section class="mt-8 first:mt-0" id="profile">
-            <h2 class="mb-0 font-bold tracking-widest text-sm2 text-green-700 ">
+            <h2 class="mb-0 font-bold tracking-widest text-lg text-green-700 ">
               PROFILE
             </h2>
 
             <section class="mb-0 grid grid-cols-2 ">
-              <p class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+              <p class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                 <span class="-ml-2 select-none text-gray-600">›</span>
                 <strong>
                   Canadian Citizen
                 </strong>
-                based in Alberta
+                based in Airdrie, Alberta
               </p>
-              <p class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+              <p class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                 <span class="-ml-2 select-none text-gray-600">›</span>
-                Available from PST to EST.
+                Located in MST, available from PST to EST.
               </p>
-              <p class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+              <p class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                 <span class="-ml-2 select-none text-gray-600">›</span>
-                Polyglot engineer seeking permanent or contract role.
+                Polyglot full stack engineer seeking permanent role.
               </p>
-              <p class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+              <p class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                 <span class="-ml-2 select-none text-gray-600">›</span>
-                Competent in Backend, Fullstack, and Data roles.
+                Experienced in Data, Backend, and ML/AI Engineering roles.
               </p>
             </section>
           </section>
@@ -87,117 +85,118 @@
               EXPERIENCE
             </h2>
 
-            <!-- Work 1 -->
-            <section class="mb-4.5">
+            <!-- Work 0 -->
+            <section class="mb-4">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">
                   Senior Software Engineer
-                  <span class="text-gray-550 font-semibold">@ Docupet</span>
+                  <span class="text-gray-500 font-semibold">@ Tresco Consoles</span>
                 </h3>
                 <p class="leading-normal text-sm text-gray-700 mt-1">
-                  May 2023 – November 2025 // <strong>Remote</strong>
+                  May 2026 – Present // Calgary AB
+                </p>
+              </header>
+              <ul class="">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Reduced AWS spend by 75% by right-sizing cloud infrastructure
+                </li>
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Designing the company's SDLC and Agentic AI engineering workflows
+                </li>
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Mentoring junior engineers on system design and engineering best practices
+                </li>
+              </ul>
+            </section>
+            <!-- End Work 0 -->
+
+            <!-- Work 1 -->
+            <section class="mb-4">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">
+                  Senior Software Engineer
+                  <span class="text-gray-500 font-semibold">@ Docupet</span>
+                </h3>
+                <p class="leading-normal text-sm text-gray-700 mt-1">
+                  May 2023 – December 2025 // <strong>Remote</strong>
                   - Canada
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Designed and implemented core systems and frontends in a large PHP Symfony application
+                  Led major overhauls to scale a monolithic legacy application from 500,000 users to over 15,000,000, designing new systems around event-based architecture with Redis Streams
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Identified underperforming queries and implemented solutions to increase database performance
+                  Engineered greenfield ingestion pipelines in Python and SQL, using LLMs to normalize legacy municipal data
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Translated product acceptance criteria and business requirements into complete architected systems
-                </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
-                  <span class="-ml-2 select-none text-gray-600">›</span>
-                  Authored technical design documents to be implemented by peer engineers
-                </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
-                  <span class="-ml-2 select-none text-gray-600">›</span>
-                  Mentored junior engineers on system design, domain knowledge and industry best practices
+                  Founded a Data team of two engineers to automate municipality onboarding with Python and SQL
                 </li>
               </ul>
             </section>
             <!-- End Work 1 -->
 
             <!-- Work 2 -->
-            <section class="mb-4.5">
+            <section class="mb-4">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">
                   Software Engineer
-                  <span class="text-gray-550 font-semibold">@ Statflo</span>
+                  <span class="text-gray-500 font-semibold">@ Statflo</span>
                 </h3>
                 <p class="leading-normal text-sm text-gray-700 mt-1">
                   April 2021 – May 2023 // <strong>Remote</strong> - Canada
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Held ownership of critical legacy backend systems and implemented refactors to maintain performance
+                  Founding engineer on the Data and Analytics team, owning all company data — billions of rows of text and call records
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Designed and implemented an in-house notification library for use across microservices to unify event communication
+                  Designed and implemented greenfield microservices consuming a central Kafka stream, processing millions of events daily
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Monitored production services and owned incident response and solution implementation
+                  Built CI/CD pipelines and deployment scripts for microservices using Kubernetes, ArgoCD, and GitHub Actions
                 </li>
               </ul>
             </section>
             <!-- End Work 2 -->
 
             <!-- Work 3 -->
-            <section class="mb-4.5">
+            <section class="mb-4">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">
                   Machine Learning Engineer
-                  <span class="text-gray-550 font-semibold">@ Helcim</span>
+                  <span class="text-gray-500 font-semibold">@ Helcim</span>
                 </h3>
                 <p class="leading-normal text-sm text-gray-700 mt-1">
-                  January 2020 – March 2021 // Calgary AB
+                  May 2019 – March 2021 // Calgary AB — promoted from Junior Software Developer
                 </p>
               </header>
               <ul class="">
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Designed, trained, and deployed a machine learning model for detecting payment and identity fraud
+                  Founded the Data and ML team responsible for designing and implementing machine learning systems across the company
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Led technical documentation for fraud defence subsystems
+                  Led development of a high-availability fraud defense system serving model inference to internal applications over REST
                 </li>
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
+                <li class="mt-2 ml-1.5 text-sm text-gray-700 leading-normal">
                   <span class="-ml-2 select-none text-gray-600">›</span>
-                  Owned observability initiative for monitoring app performance
+                  As Junior Developer, architected REST APIs for a payments platform that scaled from a few thousand merchants to over 100,000
                 </li>
               </ul>
             </section>
             <!-- End Work 3 -->
-            <!-- Work 4 -->
-            <section class="mb-4.5">
-              <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">
-                  Junior Software Developer
-                  <span class="text-gray-550 font-semibold">@ Helcim</span>
-                </h3>
-                <p class="leading-normal text-sm text-gray-700 mt-1">
-                  May 2019 – January 2020 // Calgary AB
-                </p>
-              </header>
-              <ul class="">
-                <li class="mt-2.1 ml-1.5 text-sm text-gray-700 leading-normal">
-                  <span class="-ml-2 select-none text-gray-600">›</span>
-                  Designed and Implemented payment processing subsystems including Billing and Accounting, CRM, and pay terminal firmware
-                </li>
-              </ul>
-            </section>
-            <!-- End Work 4 -->
           </section>
 
           <!-- End Experience Section -->
@@ -206,7 +205,7 @@
         <section class="print:col-span-1 col-span-3 md:col-span-1">
           <!-- Contact / Links -->
           <section class="col-span-1 mt-8 first:mt-0" id="contact">
-            <h2 class="mb-0 font-bold tracking-widest text-sm2 text-green-700 ">
+            <h2 class="mb-0 font-bold tracking-widest text-lg text-green-700 ">
               CONTACT
             </h2>
 
@@ -214,7 +213,7 @@
             <ul class="print:flex-row flex flex-wrap flex-col sm:flex-row justify-between gap-3 list-inside justify-items-start">
               <!-- Email -->
               <li class="mt-1.5 leading-normal text-gray-700 text-sm">
-                <a href="mailto:jordan@butterwick.tech" target="_blank" rel="noopener noreferrer">
+                <a href="mailto:jordan@butterwick.tech">
                   <i class="far fa-envelope text-green-900"></i>
                   jordan@butterwick.tech
                 </a>
@@ -224,7 +223,7 @@
               <li class="mt-1.5 leading-normal text-gray-700 text-sm">
                 <a href="tel:+15878305974">
                   <i class="fas fa-mobile-alt text-green-900"></i>
-                  +1-(587)-830-5974&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  +1-(587)-830-5974
                 </a>
               </li>
               <!-- End Phone -->
@@ -235,7 +234,7 @@
                   github.com/jbutterwick
                   <span class="
                         inline-block
-                        text-gray-550
+                        text-gray-500
                         print:text-black
                         font-normal
                         group-hover:text-gray-700
@@ -254,7 +253,7 @@
                   linkedin.com/in/jbutterwick
                   <span class="
                         inline-block
-                        text-gray-550
+                        text-gray-500
                         print:text-black
                         font-normal
                         group-hover:text-gray-700
@@ -265,69 +264,132 @@
                 </a>
               </li>
               <!-- End LinkedIn -->
+              <!-- Website -->
+              <li class="mt-1.5 leading-normal text-gray-700 text-sm">
+                <a href="https://butterwick.tech" class="group" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-globe text-green-900"></i>
+                  butterwick.tech
+                  <span class="
+                        inline-block
+                        text-gray-500
+                        print:text-black
+                        font-normal
+                        group-hover:text-gray-700
+                        transition
+                        duration-100
+                        ease-in
+                      ">↗</span>
+                </a>
+              </li>
+              <!-- End Website -->
             </ul>
           </section>
           <!-- End Contact / Links -->
           <!-- Skills Section -->
           <section class="col-span-1 mt-8 first:mt-0" id="skills">
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-green-700">SKILLS</h2>
+            <h2 class="mb-4 font-bold tracking-widest text-lg text-green-700">SKILLS</h2>
             <!-- Programming Languages -->
             <section class="mb-1.5" id="programming-languages">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">Programming & Languages</h3>
-                <p class="leading-normal text-sm text-gray-700 mt-1">I'm a polyglot engineer and will learn whatever languages and frameworks your teams use, but these are the ones I've shipped products in:</p>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">Programming & Languages</h3>
+                <p class="leading-normal text-sm text-gray-700 mt-1">I'm a polyglot engineer — these are the languages I've shipped products in:</p>
               </header>
               <div class="my-2.5 last:pb-1.5">
-                <ul class="flex flex-wrap flex-space-between gap-1 text-md leading-relaxed -mr-1.6 -mb-1.6">
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    PHP
-                    <i class="devicon-php-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Rust
-                    <i class="devicon-rust-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    TypeScript
-                    <i class="devicon-typescript-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    JavaScript (ES6+)
-                    <i class="devicon-javascript-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Scala
-                    <i class="devicon-scala-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
-                    Java
-                    <i class="devicon-java-plain colored"></i>
-                  </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                <ul class="flex flex-wrap gap-1 text-base leading-relaxed">
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
                     Python
                     <i class="devicon-python-plain colored"></i>
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-xs text-gray-750 print:bg-white print:border-inset bg-gray-200">
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    TypeScript
+                    <i class="devicon-typescript-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    JavaScript (ES6+)
+                    <i class="devicon-javascript-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    Node.js
+                    <i class="devicon-nodejs-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    Rust
+                    <i class="devicon-rust-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    Scala
+                    <i class="devicon-scala-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    Java
+                    <i class="devicon-java-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
                     C#
                     <i class="devicon-csharp-plain colored"></i>
+                  </li>
+                  <li class="px-2.5 text-xs text-gray-700 print:bg-white print:border bg-gray-200">
+                    Haskell
+                    <i class="devicon-haskell-plain colored"></i>
                   </li>
                 </ul>
               </div>
             </section>
             <!-- End Programming Languages -->
+            <!-- Everything Else -->
+            <section class="mb-1.5" id="other-skills">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">Everything Else</h3>
+              </header>
+              <ul class="mt-1.5">
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Data Analytics, Machine Learning, and LLM fine-tuning
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  CircleCI, GitHub Actions, Vercel
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Grafana, Prometheus, Loki, Sentry
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Cloud infrastructure in AWS and GCP
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Advanced Git strategies, SDLC and DoD definition
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Technical design, documentation, and testing
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Mentorship and knowledge transfer
+                </li>
+                <li class="mt-1 ml-1.5 text-xs text-gray-700 leading-normal">
+                  <span class="-ml-2 select-none text-gray-600">›</span>
+                  Domains, DNS, and SSL certificate management
+                </li>
+              </ul>
+            </section>
+            <!-- End Everything Else -->
           </section>
           <!-- End Skills Section -->
           <!-- Education Section -->
           <section class="col-span-3 mt-8 first:mt-0" id="education">
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-green-700">EDUCATION</h2>
+            <h2 class="mb-4 font-bold tracking-widest text-lg text-green-700">EDUCATION</h2>
             <!-- Education 1 -->
-            <section class="mb-4.5">
+            <section class="mb-4">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish">Southern Alberta Institute of Technology</h3>
-                <p class="leading-normal text-sm text-gray-650">Calgary, AB</p>
-                <p class="leading-normal text-sm text-gray-650">GPA: 3.9</p>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snug">Southern Alberta Institute of Technology</h3>
+                <p class="leading-normal text-sm text-gray-600">Calgary, AB</p>
+                <p class="leading-normal text-sm text-gray-600">GPA: 3.9</p>
               </header>
-              <p class="mt-2.1 text-sm text-gray-800 leading-normal">
+              <p class="mt-2 text-sm text-gray-800 leading-normal">
                 Web Development
               </p>
               <p class="mt-0.5 text-xs text-gray-600 leading-normal">
@@ -344,15 +406,15 @@
       <!-- Footer Build Info -->
       <footer class="print:hidden">
         <section id="resume-info" class="flex flex-row mt-16 print:mt-0">
-          <h2 class="text-xs font-hairline text-gray-550">
+          <h2 class="text-xs font-thin text-gray-500">
             This resume was built with HTML and Tailwind CSS
           </h2>
           <a href="https://github.com/jbutterwick/butterwick-tech"
-            class="group hover:text-gray-700 border-l border-gray-500 ml-3 pl-3 text-gray-550 text-xs font-hairline">
+            class="group hover:text-gray-700 border-l border-gray-500 ml-3 pl-3 text-gray-500 text-xs font-thin">
             See the GitHub Repo
             <span class="
                   inline-block
-                  text-gray-550
+                  text-gray-500
                   print:text-black
                   font-normal
                   group-hover:text-gray-700
