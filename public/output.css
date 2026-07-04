@@ -254,6 +254,9 @@
   .my-2\.5 {
     margin-block: calc(var(--spacing) * 2.5);
   }
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
   .mt-0\.5 {
     margin-top: calc(var(--spacing) * 0.5);
   }
@@ -326,8 +329,14 @@
   .w-\[210mm\] {
     width: 210mm;
   }
+  .w-full {
+    width: 100%;
+  }
   .max-w-3xl {
     max-width: var(--container-3xl);
+  }
+  .max-w-\[210mm\] {
+    max-width: 210mm;
   }
   .max-w-full {
     max-width: 100%;
@@ -343,6 +352,9 @@
   }
   .list-inside {
     list-style-position: inside;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -571,14 +583,45 @@
       }
     }
   }
+  .sm\:ml-3 {
+    @media (width >= 40rem) {
+      margin-left: calc(var(--spacing) * 3);
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .sm\:flex-row {
     @media (width >= 40rem) {
       flex-direction: row;
     }
   }
+  .sm\:gap-0 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:gap-x-4 {
+    @media (width >= 40rem) {
+      column-gap: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:border-l {
+    @media (width >= 40rem) {
+      border-left-style: var(--tw-border-style);
+      border-left-width: 1px;
+    }
+  }
   .sm\:p-9 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 9);
+    }
+  }
+  .sm\:pl-3 {
+    @media (width >= 40rem) {
+      padding-left: calc(var(--spacing) * 3);
     }
   }
   .md\:col-span-1 {
@@ -633,9 +676,24 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .print\:ml-3 {
+    @media print {
+      margin-left: calc(var(--spacing) * 3);
+    }
+  }
   .print\:hidden {
     @media print {
       display: none;
+    }
+  }
+  .print\:min-h-\[297mm\] {
+    @media print {
+      min-height: 297mm;
+    }
+  }
+  .print\:w-\[210mm\] {
+    @media print {
+      width: 210mm;
     }
   }
   .print\:w-screen {
@@ -646,6 +704,16 @@
   .print\:max-w-3xl {
     @media print {
       max-width: var(--container-3xl);
+    }
+  }
+  .print\:max-w-none {
+    @media print {
+      max-width: none;
+    }
+  }
+  .print\:grid-cols-2 {
+    @media print {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .print\:flex-row {
@@ -664,6 +732,12 @@
       border-width: 1px;
     }
   }
+  .print\:border-l {
+    @media print {
+      border-left-style: var(--tw-border-style);
+      border-left-width: 1px;
+    }
+  }
   .print\:bg-white {
     @media print {
       background-color: var(--color-white);
@@ -679,9 +753,9 @@
       padding: calc(var(--spacing) * 6);
     }
   }
-  .print\:p-10 {
+  .print\:pl-3 {
     @media print {
-      padding: calc(var(--spacing) * 10);
+      padding-left: calc(var(--spacing) * 3);
     }
   }
   .print\:text-6xl {
