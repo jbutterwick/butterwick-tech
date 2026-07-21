@@ -65,6 +65,9 @@ jobs:
       - name: Set up Chrome
         id: setup-chrome
         uses: browser-actions/setup-chrome@2e1d749697dd1612b833dba4a722266286fbefcd # v2.1.2
+        with:
+          chrome-version: 140
+          install-dependencies: true
 
       - name: Install dependencies
         run: |
