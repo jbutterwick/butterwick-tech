@@ -1,0 +1,32 @@
+{%- import "macros/resume.html" as resume_macros -%}
+{%- set resume_data = load_data(path="data/resume.toml") -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="robots" content="{{ page.extra.robots }}">
+  <link rel="canonical" href="{{ page.permalink | safe }}">
+  <link rel="stylesheet" href="/resume-application.css">
+  <title>{{ page.title }}</title>
+</head>
+<body class="application-resume-body">
+  <nav class="resume-actions screen-only" aria-label="Résumé versions and export">
+    <a href="/resume/">View polished résumé</a>
+    <button type="button" onclick="window.print()">Print or save as PDF</button>
+    <a href="/downloads/Jordan-Butterwick-Resume.pdf">Download PDF</a>
+  </nav>
+  <main class="application-resume">
+    <header class="application-header">
+      <h1>{{ resume_data.identity.name }}</h1>
+      <p class="professional-title">{{ resume_data.identity.professional_title }}</p>
+    </header>
+    {{- resume_macros::contact(identity=resume_data.identity) -}}
+    {{- resume_macros::profile(profile=resume_data.profile, identity=resume_data.identity) -}}
+    {{- resume_macros::experience(experience=resume_data.experience) -}}
+    {{- resume_macros::skills(skills=resume_data.skills) -}}
+    {{- resume_macros::education(education=resume_data.education) -}}
+  </main>
+</body>
+</html>

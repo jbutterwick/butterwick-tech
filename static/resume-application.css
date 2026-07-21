@@ -1,0 +1,346 @@
+:root {
+  color-scheme: light;
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --rule: #cbd5e1;
+  --accent: #166534;
+  --paper: #ffffff;
+  --canvas: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  line-height: 1.35;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.resume-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  max-width: 210mm;
+}
+
+.resume-actions a,
+.resume-actions button {
+  background: var(--paper);
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  color: var(--accent);
+  cursor: pointer;
+  display: inline-flex;
+  font: 600 0.85rem/1 Arial, Helvetica, sans-serif;
+  padding: 0.7rem 0.9rem;
+  text-decoration: none;
+}
+
+.resume-actions a:hover,
+.resume-actions a:focus-visible,
+.resume-actions button:hover,
+.resume-actions button:focus-visible {
+  background: #dcfce7;
+  outline: 3px solid #86efac;
+  outline-offset: 2px;
+}
+
+.application-resume {
+  background: var(--paper);
+  box-shadow: 0 0.35rem 1.5rem rgb(15 23 42 / 12%);
+  margin: 0 auto;
+  max-width: 210mm;
+  padding: 14mm;
+}
+
+.application-header {
+  border-bottom: 1.5pt solid var(--ink);
+  margin-bottom: 0.65rem;
+  padding-bottom: 0.45rem;
+}
+
+.application-header h1 {
+  font-size: 25pt;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  margin: 0;
+}
+
+.professional-title {
+  color: var(--accent);
+  font-size: 12pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0.35rem 0 0;
+}
+
+.resume-section {
+  margin-top: 0.8rem;
+}
+
+.resume-section > h2 {
+  border-bottom: 0.75pt solid var(--rule);
+  color: var(--accent);
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.12rem;
+  text-transform: uppercase;
+}
+
+.resume-contact-section {
+  margin-top: 0;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 9.5pt;
+  font-style: normal;
+  gap: 0.2rem 0.85rem;
+}
+
+.resume-contact a {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.resume-contact a:hover,
+.resume-contact a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.resume-summary {
+  display: block;
+}
+
+.resume-summary p {
+  font-size: 10.5pt;
+  margin: 0;
+}
+
+.resume-summary p + p {
+  margin-top: 0.2rem;
+}
+
+.resume-logistics {
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 9.5pt;
+  gap: 0.15rem 0.85rem;
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+}
+
+.resume-role {
+  break-inside: avoid;
+  margin-top: 0.65rem;
+}
+
+.resume-role:first-of-type {
+  margin-top: 0;
+}
+
+.resume-role-header h3 {
+  font-size: 11pt;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.resume-company {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.resume-role-meta,
+.resume-school-meta {
+  color: var(--muted);
+  font-size: 9.5pt;
+  margin: 0.12rem 0 0;
+}
+
+.resume-bullets {
+  font-size: 10pt;
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.resume-bullets li + li {
+  margin-top: 0.18rem;
+}
+
+.resume-skill-group {
+  break-inside: avoid;
+  margin-top: 0.35rem;
+}
+
+.resume-skill-group:first-of-type {
+  margin-top: 0;
+}
+
+.resume-skill-group h3 {
+  display: inline;
+  font-size: 10pt;
+  margin: 0;
+}
+
+.resume-skill-group h3::after {
+  content: ":";
+}
+
+.resume-skill-list {
+  display: inline;
+  font-size: 10pt;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-skill-list li {
+  display: inline;
+}
+
+.resume-skill-list li:not(:last-child)::after {
+  content: ", ";
+}
+
+.resume-school,
+.resume-education {
+  break-inside: avoid;
+}
+
+.resume-school h3 {
+  font-size: 11pt;
+  margin: 0;
+}
+
+.resume-school p {
+  font-size: 10pt;
+  margin: 0.15rem 0 0;
+}
+
+.resume-credential {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  body {
+    background: var(--paper);
+    padding: 0;
+  }
+
+  .resume-actions {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 0.75rem 1rem 0;
+  }
+
+  .application-resume {
+    box-shadow: none;
+    max-width: none;
+    padding: 1.25rem;
+    width: 100%;
+  }
+
+  .application-header h1 {
+    font-size: 21pt;
+  }
+
+  .resume-contact,
+  .resume-logistics {
+    flex-direction: column;
+  }
+}
+
+@page {
+  margin: 8mm 11mm;
+  size: A4;
+}
+
+@media print {
+  html {
+    font-size: 11pt;
+  }
+
+  body {
+    background: var(--paper);
+    line-height: 1.25;
+    padding: 0;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  .application-resume {
+    box-shadow: none;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .application-header {
+    margin-bottom: 0.45rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .application-header h1 {
+    font-size: 23pt;
+  }
+
+  .professional-title {
+    font-size: 11.5pt;
+    margin-top: 0.2rem;
+  }
+
+  .resume-section {
+    margin-top: 0.5rem;
+  }
+
+  .resume-section > h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .resume-summary p + p,
+  .resume-logistics {
+    margin-top: 0.12rem;
+  }
+
+  .resume-role {
+    margin-top: 0.42rem;
+  }
+
+  .resume-bullets {
+    margin-top: 0.15rem;
+  }
+
+  .resume-bullets li + li {
+    margin-top: 0.1rem;
+  }
+
+  .resume-skill-group {
+    margin-top: 0.2rem;
+  }
+
+  a {
+    color: inherit;
+  }
+}

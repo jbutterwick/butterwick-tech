@@ -1,0 +1,90 @@
+{%- macro contact(identity) -%}
+<section class="resume-section resume-contact-section" id="contact">
+  <h2>Contact</h2>
+  <address class="resume-contact">
+    <a href="mailto:{{ identity.email }}">{{ identity.email }}</a>
+    <a href="tel:{{ identity.phone_href }}">{{ identity.phone_display }}</a>
+    <a href="{{ identity.github }}" target="_blank" rel="noopener noreferrer">github.com/jbutterwick</a>
+    <a href="{{ identity.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/jbutterwick</a>
+    <a href="{{ identity.website }}" target="_blank" rel="noopener noreferrer">butterwick.tech</a>
+  </address>
+</section>
+{%- endmacro contact -%}
+
+{%- macro profile(profile, identity) -%}
+<section class="resume-section resume-profile" id="profile">
+  <h2>Profile</h2>
+  <div class="resume-summary">
+    {%- for statement in profile.summary_seed -%}
+    <p>{{ statement }}</p>
+    {%- endfor -%}
+  </div>
+  <ul class="resume-logistics" aria-label="Location and availability">
+    <li>{{ identity.location }}</li>
+    {%- for item in profile.logistics -%}
+    <li>{{ item }}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endmacro profile -%}
+
+{%- macro experience(experience) -%}
+<section class="resume-section resume-experience" id="experience">
+  <h2>Experience</h2>
+  {%- for role in experience -%}
+  <article class="resume-role">
+    <header class="resume-role-header">
+      <h3>{{ role.title }} <span class="resume-company">— {{ role.company }}</span></h3>
+      <p class="resume-role-meta">
+        <span>{{ role.display_date }}</span>
+        <span aria-hidden="true"> · </span>
+        <span>{{ role.location }}</span>
+        {%- if role.promotion_note -%}
+        <span aria-hidden="true"> · </span>
+        <span>{{ role.promotion_note }}</span>
+        {%- endif -%}
+      </p>
+    </header>
+    <ul class="resume-bullets">
+      {%- for bullet in role.bullets -%}
+      <li>{{ bullet }}</li>
+      {%- endfor -%}
+    </ul>
+  </article>
+  {%- endfor -%}
+</section>
+{%- endmacro experience -%}
+
+{%- macro skills(skills) -%}
+<section class="resume-section resume-skills" id="skills">
+  <h2>Skills</h2>
+  {%- set categories = ["Languages", "Backend & Data", "Cloud & Platform", "Observability"] -%}
+  {%- for category in categories -%}
+    {%- set category_skills = skills | filter(attribute="category", value=category) | filter(attribute="featured", value=true) -%}
+    {%- if category_skills | length > 0 -%}
+    <section class="resume-skill-group">
+      <h3>{{ category }}</h3>
+      <ul class="resume-skill-list">
+        {%- for skill in category_skills -%}
+        <li>{{ skill.name }}</li>
+        {%- endfor -%}
+      </ul>
+    </section>
+    {%- endif -%}
+  {%- endfor -%}
+</section>
+{%- endmacro skills -%}
+
+{%- macro education(education) -%}
+<section class="resume-section resume-education" id="education">
+  <h2>Education</h2>
+  {%- for item in education -%}
+  <article class="resume-school">
+    <h3>{{ item.institution }}</h3>
+    <p class="resume-school-meta">{{ item.location }} · GPA: {{ item.gpa }}</p>
+    <p class="resume-credential">{{ item.credential }}</p>
+    <p>{{ item.details }}</p>
+  </article>
+  {%- endfor -%}
+</section>
+{%- endmacro education -%}

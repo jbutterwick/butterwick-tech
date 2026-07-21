@@ -1,44 +1,95 @@
-name: Export resume to PDF
+name: Verify and export résumé
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [main]
     paths:
-      - '../../content/resume.html'
+      - .github/workflows/main.yml
+      - content/resume.md
+      - content/resume-application.md
+      - config.toml
+      - data/resume.toml
+      - package.json
+      - package-lock.json
+      - scripts/export_resume_pdf.py
+      - scripts/test_export_resume_pdf.py
+      - scripts/test_verify_resume.py
+      - scripts/verify_resume.py
+      - static/input.css
+      - static/resume-application.css
+      - templates/macros/resume.html
+      - templates/resume-application.html
+      - templates/resume-web.html
+  pull_request:
+    paths:
+      - .github/workflows/main.yml
+      - content/resume.md
+      - content/resume-application.md
+      - config.toml
+      - data/resume.toml
+      - package.json
+      - package-lock.json
+      - scripts/export_resume_pdf.py
+      - scripts/test_export_resume_pdf.py
+      - scripts/test_verify_resume.py
+      - scripts/verify_resume.py
+      - static/input.css
+      - static/resume-application.css
+      - templates/macros/resume.html
+      - templates/resume-application.html
+      - templates/resume-web.html
+
+permissions:
+  contents: read
+
+concurrency:
+  group: resume-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  export-to-pdf:
+  verify-and-export:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-    - uses: actions/checkout@v6-beta
-          
-    - name: Get current date
-      id: date
-      shell: bash
-      run: |
-        TODAY_ISO=$(date +'%Y-%m-%d')
-        echo "date=$TODAY_ISO" >> $GITHUB_OUTPUT
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-    - name: Export resume to pdf
-      uses: lucafaggianelli/html-to-pdf-action@master
-      with:
-        htmlFile: ./oldsrc/pages/resume.html
-        outputFile: ./dist/resume-${{ steps.date.outputs.date }}.pdf
-        pdfOptions: '{"format": "A4", "printBackground": true}'
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
 
-    - uses: rickstaa/action-create-tag@v1
-      with:
-        tag: v${{ steps.date.outputs.date }}-${{ github.sha }}
+      - name: Install Zola
+        uses: taiki-e/install-action@a6b2e2dcd845ddd7f509ce4f3ed3d922b80cc5d9 # v2.84.0
+        with:
+          tool: zola@0.22.1
+          fallback: none
 
-    - name: Release
-      uses: softprops/action-gh-release@v2
-      with:
-        name: Resume ${{ steps.date.outputs.date }}
-        tag_name: v${{ steps.date.outputs.date }}-${{ github.sha }}
-        files: ./dist/resume-*.pdf
+      - name: Set up Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@2e1d749697dd1612b833dba4a722266286fbefcd # v2.1.2
 
-    - uses: actions/upload-artifact@v4
-      with:
-        name: resume
-        path: ./dist/*
+      - name: Install dependencies
+        run: |
+          npm ci
+          sudo apt-get update
+          sudo apt-get install --yes poppler-utils
+
+      - name: Run résumé unit tests
+        run: python3 -m unittest scripts/test_verify_resume.py scripts/test_export_resume_pdf.py -v
+
+      - name: Build, export, and verify résumé
+        env:
+          CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: python3 scripts/export_resume_pdf.py
+
+      - name: Upload application résumé
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: jordan-butterwick-resume-${{ github.sha }}
+          path: static/downloads/Jordan-Butterwick-Resume.pdf
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,50 @@
+{%- import "macros/resume.html" as resume_macros -%}
+{%- set resume_data = load_data(path="data/resume.toml") -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="author" content="{{ resume_data.identity.name }}">
+  <link rel="canonical" href="{{ page.permalink | safe }}">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+  <link href="https://fonts.bunny.net/css?family=abril-fatface:400|albert-sans:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="/output.css">
+  <title>{{ page.title }}</title>
+</head>
+<body class="resume-web-body min-h-screen bg-orange-100 print:bg-white">
+  <nav class="resume-web-actions print:hidden" aria-label="Résumé versions and export">
+    <a href="/resume/application/" class="resume-action-link">Application version</a>
+    <button type="button" onclick="window.print()" class="resume-action-primary">Print or save as PDF</button>
+  </nav>
+  <main class="resume-web-page mx-auto my-5 w-full max-w-[210mm] rounded-md bg-white shadow-lg print:m-0 print:w-full print:max-w-none print:rounded-none print:shadow-none">
+    <div class="resume-web-content mx-auto max-w-3xl bg-white p-5 sm:p-9 md:p-8 print:p-8">
+      <header class="resume-web-header mb-6 border-b-2 border-gray-400 pb-3">
+        <h1 class="font-abril text-4xl leading-none text-gray-700 sm:text-5xl lg:text-6xl">{{ resume_data.identity.name }}</h1>
+        <p class="professional-title mt-2 font-albert text-base font-semibold tracking-wide text-green-800 sm:text-lg">{{ resume_data.identity.professional_title }}</p>
+      </header>
+
+      <div class="resume-web-profile mb-7">
+        {{- resume_macros::profile(profile=resume_data.profile, identity=resume_data.identity) -}}
+      </div>
+
+      <div class="resume-web-columns">
+        <div class="resume-web-main-column">
+          {{- resume_macros::experience(experience=resume_data.experience) -}}
+        </div>
+        <aside class="resume-web-sidebar" aria-label="Contact, skills, and education">
+          {{- resume_macros::contact(identity=resume_data.identity) -}}
+          {{- resume_macros::skills(skills=resume_data.skills) -}}
+          {{- resume_macros::education(education=resume_data.education) -}}
+        </aside>
+      </div>
+
+      <footer class="resume-web-footer print:hidden">
+        <p>This résumé was built with HTML, Zola, and Tailwind CSS.</p>
+        <a href="https://github.com/jbutterwick/butterwick-tech" target="_blank" rel="noopener noreferrer">View the source</a>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>

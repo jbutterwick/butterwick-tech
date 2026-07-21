@@ -1,0 +1,216 @@
+[identity]
+name = "Jordan Butterwick"
+professional_title = "Senior Software Engineer"
+email = "jordan@butterwick.tech"
+phone_display = "+1-(587)-830-5974"
+phone_href = "+15878305974"
+location = "Airdrie, AB"
+website = "https://butterwick.tech"
+github = "https://github.com/jbutterwick"
+linkedin = "https://www.linkedin.com/in/jbutterwick/"
+
+[profile]
+summary_status = "needs-copy-review"
+summary_seed = [
+  "Polyglot full stack engineer seeking permanent role.",
+  "Experienced in Data, Backend, and ML/AI Engineering roles.",
+]
+logistics = [
+  "Canadian Citizen based in Airdrie, Alberta",
+  "Located in MST, available from PST to EST.",
+]
+
+[[experience]]
+company = "Tresco Consoles"
+title = "Senior Software Engineer"
+start = "2026-05"
+end = "present"
+display_date = "May 2026 – Present"
+location = "Calgary, AB"
+remote = false
+bullets = [
+  "Reduced AWS spend by 75% by right-sizing cloud infrastructure",
+  "Designing the company's SDLC and Agentic AI engineering workflows",
+  "Mentoring junior engineers on system design and engineering best practices",
+]
+
+[[experience]]
+company = "Docupet"
+title = "Senior Software Engineer"
+start = "2023-05"
+end = "2025-12"
+display_date = "May 2023 – December 2025"
+location = "Remote, Canada"
+remote = true
+bullets = [
+  "Led major overhauls to scale a monolithic legacy application from 500,000 users to over 15,000,000, designing new systems around event-based architecture with Redis Streams",
+  "Engineered greenfield ingestion pipelines in Python and SQL, using LLMs to normalize legacy municipal data",
+  "Founded a Data team of two engineers to automate municipality onboarding with Python and SQL",
+]
+
+[[experience]]
+company = "Statflo"
+title = "Software Engineer"
+start = "2021-04"
+end = "2023-05"
+display_date = "April 2021 – May 2023"
+location = "Remote, Canada"
+remote = true
+bullets = [
+  "Founding engineer on the Data and Analytics team, owning all company data — billions of rows of text and call records",
+  "Designed and implemented greenfield microservices consuming a central Kafka stream, processing millions of events daily",
+  "Built CI/CD pipelines and deployment scripts for microservices using Kubernetes, ArgoCD, and GitHub Actions",
+]
+
+[[experience]]
+company = "Helcim"
+title = "Machine Learning Engineer"
+start = "2019-05"
+end = "2021-03"
+display_date = "May 2019 – March 2021"
+location = "Calgary, AB"
+remote = false
+promotion_note = "Promoted from Junior Software Developer"
+bullets = [
+  "Founded the Data and ML team responsible for designing and implementing machine learning systems across the company",
+  "Led development of a high-availability fraud defense system serving model inference to internal applications over REST",
+  "As Junior Developer, architected REST APIs for a payments platform that scaled from a few thousand merchants to over 100,000",
+]
+
+[[skills]]
+name = "Python"
+category = "Languages"
+featured = true
+
+[[skills]]
+name = "TypeScript"
+category = "Languages"
+featured = true
+
+[[skills]]
+name = "JavaScript (ES6+)"
+category = "Languages"
+featured = true
+
+[[skills]]
+name = "SQL"
+category = "Languages"
+featured = true
+
+[[skills]]
+name = "Rust"
+category = "Languages"
+featured = false
+
+[[skills]]
+name = "Scala"
+category = "Languages"
+featured = false
+
+[[skills]]
+name = "Java"
+category = "Languages"
+featured = false
+
+[[skills]]
+name = "C#"
+category = "Languages"
+featured = false
+
+[[skills]]
+name = "Haskell"
+category = "Languages"
+featured = false
+
+[[skills]]
+name = "Node.js"
+category = "Backend & Data"
+featured = true
+
+[[skills]]
+name = "Redis Streams"
+category = "Backend & Data"
+featured = true
+
+[[skills]]
+name = "Kafka"
+category = "Backend & Data"
+featured = true
+
+[[skills]]
+name = "Data analytics, machine learning, and LLM systems"
+category = "Backend & Data"
+featured = true
+
+[[skills]]
+name = "AWS"
+category = "Cloud & Platform"
+featured = true
+
+[[skills]]
+name = "GCP"
+category = "Cloud & Platform"
+featured = true
+
+[[skills]]
+name = "Kubernetes"
+category = "Cloud & Platform"
+featured = true
+
+[[skills]]
+name = "ArgoCD"
+category = "Cloud & Platform"
+featured = true
+
+[[skills]]
+name = "GitHub Actions"
+category = "Cloud & Platform"
+featured = true
+
+[[skills]]
+name = "CircleCI"
+category = "Cloud & Platform"
+featured = false
+
+[[skills]]
+name = "Vercel"
+category = "Cloud & Platform"
+featured = false
+
+[[skills]]
+name = "Grafana, Prometheus, Loki, and Sentry"
+category = "Observability"
+featured = true
+
+[[skills]]
+name = "Advanced Git strategies"
+category = "Engineering Practice"
+featured = false
+
+[[skills]]
+name = "SDLC and Definition of Done"
+category = "Engineering Practice"
+featured = false
+
+[[skills]]
+name = "Technical design, documentation, and testing"
+category = "Engineering Practice"
+featured = false
+
+[[skills]]
+name = "Mentorship and knowledge transfer"
+category = "Engineering Practice"
+featured = false
+
+[[skills]]
+name = "Domains, DNS, and SSL certificate management"
+category = "Engineering Practice"
+featured = false
+
+[[education]]
+institution = "Southern Alberta Institute of Technology"
+location = "Calgary, AB"
+credential = "Web Development"
+credential_status = "needs-confirmation"
+gpa = "3.9"
+details = "Graduated with honors. Studied Web Design and Development Fundamentals in HTML, JavaScript, and PHP."
