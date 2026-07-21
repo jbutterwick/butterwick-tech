@@ -69,50 +69,40 @@ def export_with_chrome(chrome: str, url: str, profile_dir: Path) -> None:
     command = [
         chrome,
         "--headless=new",
-        "--disable-background-networking",
-        "--disable-component-update",
         "--disable-gpu",
-        "--disable-dev-shm-usage",
-        "--disable-sync",
-        "--metrics-recording-only",
         "--no-sandbox",
-        "--no-first-run",
         "--no-pdf-header-footer",
         f"--user-data-dir={profile_dir}",
         f"--print-to-pdf={PDF_PATH}",
         url,
     ]
-    with tempfile.TemporaryFile(mode="w+t", encoding="utf-8") as chrome_log:
-        process = subprocess.Popen(
-            command,
-            cwd=ROOT,
-            start_new_session=True,
-            stdout=chrome_log,
-            stderr=subprocess.STDOUT,
-            text=True,
-        )
-        deadline = time.monotonic() + 45
-        try:
-            while time.monotonic() < deadline:
-                if PDF_PATH.exists() and PDF_PATH.stat().st_size > 0:
-                    time.sleep(0.5)
-                    return
-                if process.poll() is not None:
-                    break
-                time.sleep(0.25)
-        finally:
-            if process.poll() is None:
-                os.killpg(process.pid, signal.SIGTERM)
-                try:
-                    process.wait(timeout=5)
-                except subprocess.TimeoutExpired:
-                    os.killpg(process.pid, signal.SIGKILL)
-                    process.wait(timeout=5)
-
-        chrome_log.seek(0)
-        raise RuntimeError(
-            f"Chrome did not produce the résumé PDF.\n{chrome_log.read()}"
-        )
+    process = subprocess.Popen(
+        command,
+        cwd=ROOT,
+        start_new_session=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
+    deadline = time.monotonic() + 45
+    try:
+        while time.monotonic() < deadline:
+            if PDF_PATH.exists() and PDF_PATH.stat().st_size > 0:
+                time.sleep(0.5)
+                return
+            if process.poll() is not None:
+                break
+            time.sleep(0.25)
+        output = process.stdout.read() if process.stdout else ""
+        raise RuntimeError(f"Chrome did not produce the résumé PDF.\n{output}")
+    finally:
+        if process.poll() is None:
+            os.killpg(process.pid, signal.SIGTERM)
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                os.killpg(process.pid, signal.SIGKILL)
+                process.wait(timeout=5)
 
 
 def main() -> int:
@@ -164,7 +154,7 @@ def main() -> int:
         )
         print(verification.stdout, end="")
 
-    rebuild = run_checked(["npm", "run", "build:site"])
+    rebuild = run_checked(["zola", "build"])
     print(rebuild.stdout, end="")
     if not PUBLIC_PDF_PATH.is_file():
         raise RuntimeError(f"Generated site is missing downloadable PDF: {PUBLIC_PDF_PATH}")

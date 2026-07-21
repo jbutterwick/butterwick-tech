@@ -7,7 +7,6 @@ theme = "prairie"
 
 env = "ZOLA_ENV"
 color_mode = "auto"
-site_name = "butterwick.tech"
 menu_items = [
     { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
     { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
@@ -15,30 +14,6 @@ menu_items = [
     { name = "now", url = "$LANG_BASE_URL/now" },
     { name = "resume", url = "$LANG_BASE_URL/resume/" },
 ]
-
-[extra.profile]
-name = "Jordan Butterwick"
-role = "Senior Software Engineer"
-location = "Airdrie, Alberta"
-email = "jordan@butterwick.tech"
-tagline = "I build and lead reliable backend, data, cloud, and ML systems at production scale."
-about_preview = "I turn complex systems into dependable products, with an emphasis on clear architecture, pragmatic delivery, and teams that can own what they build."
-
-[[extra.impact]]
-value = "15M"
-label = "users scaled"
-
-[[extra.impact]]
-value = "Billions"
-label = "of records managed"
-
-[[extra.impact]]
-value = "Millions"
-label = "of daily events"
-
-[[extra.impact]]
-value = "75%"
-label = "AWS cost reduction"
 
 [extra.images]
 # Width defined in pixels
@@ -51,11 +26,6 @@ first_name = "Jordan"
 last_name = "Butterwick"
 gender = "male"
 username = "jbutterwick"
-site_name = "butterwick.tech"
-image = "/social-card.png"
-image_alt = "Jordan Butterwick, Senior Software Engineer at butterwick.tech"
-image_width = 1200
-image_height = 630
 
 # Footer social links; full options listed in macros/social.html
 [extra.social]
@@ -63,12 +33,16 @@ email = "jordan@butterwick.tech"
 linkedin = "jbutterwick"
 github = "jbutterwick"
 
+# CDN links
+[extra.cdn]
+font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+
 
 [languages]
 
 [languages.en]
-title = "Jordan Butterwick — Senior Software Engineer"
-description = "Senior software engineer building reliable backend, data, cloud, and machine-learning systems at production scale."
+title = "butterwick.tech"
+description = "homepage of butterwick.tech"
 generate_feeds = true
 feed_filenames = ["atom.xml", "rss.xml"]
 taxonomies = [

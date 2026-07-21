@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        abril: ['"Iowan Old Style"', '"New York"', 'Georgia', ...defaultTheme.fontFamily.serif],
-        albert: [...defaultTheme.fontFamily.sans],
+        abril: ['"Abril Fatface"', ...defaultTheme.fontFamily.sans],
+        albert: ['"Albert Sans"', ...defaultTheme.fontFamily.sans],
         calistoga: ['"Calistoga"', ...defaultTheme.fontFamily.sans],
       }
     }

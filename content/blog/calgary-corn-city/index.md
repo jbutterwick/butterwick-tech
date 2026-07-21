@@ -1,7 +1,6 @@
 +++
 title = "Growing Corn in a Cold Climate"
 date = 2026-01-15
-description = "A practical guide to heat units, variety selection, water, and fertility for growing corn in a cold climate."
 
 [taxonomies]
 tags = ["gardening"]
@@ -15,6 +14,8 @@ living = true
 #{{ img(path="corn-2.jpg", alt="up close cob", caption="Troubadour MXR corn cob grown in my Crossfield corn plot") }}
 
 +++
+
+# Growing Corn in a Cold Climate
 
 Your guide to growing corn in the frosty regions
 <!-- more -->

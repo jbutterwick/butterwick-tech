@@ -1,7 +1,6 @@
 +++
 title = "frishy.net"
 date = 2026-02-03
-description = "frishy.net is a fish data logger for anglers with catch records, maps, species data, and community features."
 
 [taxonomies]
 categories = ["software"]
@@ -9,6 +8,8 @@ categories = ["software"]
 [extra]
 living = true
 +++
+# frishy.net
+
 frishy.net is a fish data logger for anglers with community features.
 <!-- more -->
 One of my 2026 resolutions was to get out fishing more often. I hadn't been fishing in a while, and since the last time 
