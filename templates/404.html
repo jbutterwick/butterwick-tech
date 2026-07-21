@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found — {{ config.extra.site_name }}{% endblock title %}
+{% block extra_head %}<meta name="robots" content="noindex,follow">{% endblock extra_head %}
+
+{% block content %}
+<main id="main-content" class="article-shell" tabindex="-1">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <div class="content">
+        <p>The page you requested is not here. It may have moved, or the address may be incomplete.</p>
+        <p><a href="{{ get_url(path="") }}">Return to the homepage</a></p>
+    </div>
+</main>
+{% endblock content %}

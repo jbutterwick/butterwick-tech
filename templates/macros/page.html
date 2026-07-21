@@ -1,0 +1,57 @@
+{% macro page_info(page) %}
+<div class="article-info">
+    {% if page.date %}
+    <span class="article-date">{{ page.date | date(format=trans(key="date_format", lang=lang)) }} · {{ page.reading_time }} {{ trans(key="minute", lang=lang) }}</span>
+    {% endif %}
+    {% if page.taxonomies.categories %}
+    <ul class="article-categories" aria-label="Categories">
+        {% for category in page.taxonomies.categories %}
+        <li><a href="{{ get_taxonomy_url(kind="categories", name=category, lang=lang) | safe }}">{{ category }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.taxonomies.tags %}
+    <ul class="article-tags" aria-label="Tags">
+        {% for tag in page.taxonomies.tags %}
+        <li><a href="{{ get_taxonomy_url(kind="tags", name=tag, lang=lang) | safe }}">#{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if page.extra.living %}<span class="article-state">Living document</span>{% endif %}
+    {% if page.components is containing("projects") and page.extra.repo_path %}
+    <a class="article-source" href="https://github.com/{{ page.extra.repo_path }}" target="_blank" rel="noopener noreferrer">Source on GitHub</a>
+    {% endif %}
+</div>
+{% endmacro page_info %}
+
+{% macro page_listing(page, heading_level=2) %}
+<article class="post-list">
+    <header>
+        {% if heading_level == 3 %}
+        <h3><a class="post-title-link" href="{{ page.permalink }}">{{ page.title }}</a></h3>
+        {% else %}
+        <h2><a class="post-title-link" href="{{ page.permalink }}">{{ page.title }}</a></h2>
+        {% endif %}
+    </header>
+    {% if page.summary %}
+    <div class="content post-summary">{{ page.summary | safe }}</div>
+    {% endif %}
+    {{ self::page_info(page=page) }}
+    <a class="post-read-link" href="{{ page.permalink }}">Read {{ page.title }}</a>
+</article>
+{% endmacro page_listing %}
+
+{% macro project_listing(page, heading_level=3) %}
+{{ self::page_listing(page=page, heading_level=heading_level) }}
+{% endmacro project_listing %}
+
+{% macro page_pagination(paginator) %}
+<nav class="pagination" aria-label="Pagination">
+    <div class="pagination-item {% if not paginator.previous %}disabled{% endif %}">
+        {% if paginator.previous %}<a href="{{ paginator.previous }}">{{ trans(key="prev_page", lang=lang) }}</a>{% endif %}
+    </div>
+    <div class="pagination-item {% if not paginator.next %}disabled{% endif %}">
+        {% if paginator.next %}<a href="{{ paginator.next }}">{{ trans(key="next_page", lang=lang) }}</a>{% endif %}
+    </div>
+</nav>
+{% endmacro page_pagination %}

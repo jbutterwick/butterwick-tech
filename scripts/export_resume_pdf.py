@@ -154,7 +154,7 @@ def main() -> int:
         )
         print(verification.stdout, end="")
 
-    rebuild = run_checked(["zola", "build"])
+    rebuild = run_checked(["npm", "run", "build:site"])
     print(rebuild.stdout, end="")
     if not PUBLIC_PDF_PATH.is_file():
         raise RuntimeError(f"Generated site is missing downloadable PDF: {PUBLIC_PDF_PATH}")

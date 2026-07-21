@@ -267,6 +267,12 @@ body {
   .resume-logistics {
     flex-direction: column;
   }
+
+  .resume-contact a {
+    align-items: center;
+    display: inline-flex;
+    min-height: 24px;
+  }
 }
 
 @page {

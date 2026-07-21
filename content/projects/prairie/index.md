@@ -1,6 +1,7 @@
 +++
 title = "Prairie Zola Template"
 date = 2026-01-11
+description = "Prairie is Jordan Butterwick's Zola theme experiment, adapted from Papaya with a nature-oriented visual system."
 
 [taxonomies]
 categories = ["software"]
@@ -9,8 +10,6 @@ categories = ["software"]
 repo_path = "jbutterwick/prairie"
 living = true
 +++
-# prairie
-
 A couple of months ago I got interested in [Zola](https://www.getzola.org/), a static site generator built with [rust](https://rust-lang.org/).
 <!-- more -->
 I did some experimenting with it and considered using it for a personal project I had been working on at the time, exploring the various themes the [zola community](https://www.getzola.org/themes/) has to offer.

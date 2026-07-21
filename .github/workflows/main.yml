@@ -1,4 +1,4 @@
-name: Verify and export résumé
+name: Verify site and export résumé
 
 on:
   workflow_dispatch:
@@ -6,45 +6,39 @@ on:
     branches: [main]
     paths:
       - .github/workflows/main.yml
-      - content/resume.md
-      - content/resume-application.md
+      - content/**
       - config.toml
-      - data/resume.toml
+      - data/**
       - package.json
       - package-lock.json
-      - scripts/export_resume_pdf.py
-      - scripts/test_export_resume_pdf.py
-      - scripts/test_verify_resume.py
-      - scripts/verify_resume.py
-      - static/input.css
-      - static/resume-application.css
-      - templates/macros/resume.html
-      - templates/resume-application.html
-      - templates/resume-web.html
+      - public/**
+      - sass/**
+      - scripts/**
+      - static/**
+      - tailwind.config.js
+      - templates/**
+      - themes/prairie/sass/**
   pull_request:
     paths:
       - .github/workflows/main.yml
-      - content/resume.md
-      - content/resume-application.md
+      - content/**
       - config.toml
-      - data/resume.toml
+      - data/**
       - package.json
       - package-lock.json
-      - scripts/export_resume_pdf.py
-      - scripts/test_export_resume_pdf.py
-      - scripts/test_verify_resume.py
-      - scripts/verify_resume.py
-      - static/input.css
-      - static/resume-application.css
-      - templates/macros/resume.html
-      - templates/resume-application.html
-      - templates/resume-web.html
+      - public/**
+      - sass/**
+      - scripts/**
+      - static/**
+      - tailwind.config.js
+      - templates/**
+      - themes/prairie/sass/**
 
 permissions:
   contents: read
 
 concurrency:
-  group: resume-${{ github.workflow }}-${{ github.ref }}
+  group: site-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -78,13 +72,24 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes poppler-utils
 
-      - name: Run résumé unit tests
-        run: python3 -m unittest scripts/test_verify_resume.py scripts/test_export_resume_pdf.py -v
+      - name: Run unit tests
+        run: python3 -m unittest scripts/test_verify_resume.py scripts/test_export_resume_pdf.py scripts/test_normalize_html.py scripts/test_verify_site.py -v
 
       - name: Build, export, and verify résumé
         env:
           CHROME_BIN: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: python3 scripts/export_resume_pdf.py
+
+      - name: Verify generated website
+        run: python3 scripts/verify_site.py public
+
+      - name: Verify generated output is current
+        run: >-
+          git diff --exit-code --
+          public
+          static/output.css
+          static/processed_images
+          ':(exclude)public/downloads/Jordan-Butterwick-Resume.pdf'
 
       - name: Upload application résumé
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

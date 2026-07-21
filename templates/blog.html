@@ -1,0 +1,18 @@
+{% import "macros/page.html" as page_macros %}
+{% extends "base.html" %}
+
+{% block content %}
+<main id="main-content" class="listing-page" tabindex="-1">
+    <p class="eyebrow">Ideas, field notes, and practical experiments</p>
+    <h1>{{ section.title }}</h1>
+    <p><a href="{{ get_url(path="tags/") }}">Browse writing by tag</a></p>
+    <div class="writing-list">
+    {% if paginator.pages %}
+        {% for page in paginator.pages %}{{ page_macros::page_listing(page=page, heading_level=2) }}{% endfor %}
+        {{ page_macros::page_pagination(paginator=paginator) }}
+    {% else %}
+        {% for page in section.pages | sort(attribute="date") | reverse %}{{ page_macros::page_listing(page=page, heading_level=2) }}{% endfor %}
+    {% endif %}
+    </div>
+</main>
+{% endblock content %}

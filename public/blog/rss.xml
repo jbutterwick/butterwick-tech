@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>Jordan Butterwick — Senior Software Engineer - Blog</title>
+      <link>https://butterwick.tech/blog/</link>
+      <description>Senior software engineer building reliable backend, data, cloud, and machine-learning systems at production scale.</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://butterwick.tech/blog/rss.xml/" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Growing Corn in a Cold Climate</title>
+          <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://butterwick.tech/blog/calgary-corn-city/</link>
+          <guid>https://butterwick.tech/blog/calgary-corn-city/</guid>
+          <description xml:base="https://butterwick.tech/blog/calgary-corn-city/">&lt;p&gt;Your guide to growing corn in the frosty regions&lt;&#x2F;p&gt;</description>
+      </item>
+    </channel>
+</rss>

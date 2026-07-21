@@ -1,0 +1,79 @@
+{% import "macros/page.html" as page_macros %}
+{% extends "base.html" %}
+
+{% block content %}
+<main id="main-content" class="home-page" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">{{ config.extra.profile.location }} · Backend, data, cloud &amp; ML</p>
+        <h1 id="hero-title">{{ config.extra.profile.name }}</h1>
+        <p class="hero-role">{{ config.extra.profile.role }}</p>
+        <p class="hero-tagline">{{ config.extra.profile.tagline }}</p>
+        <div class="hero-actions" aria-label="Primary actions">
+            <a class="button-link primary" href="{{ get_url(path="projects/") }}">View selected work</a>
+            <a class="button-link" href="{{ get_url(path="resume/") }}">Résumé</a>
+            <a class="button-link" href="mailto:{{ config.extra.profile.email }}">Contact</a>
+        </div>
+    </section>
+
+    <section class="impact-strip" aria-label="Selected engineering impact">
+        {% for item in config.extra.impact %}
+        <div class="impact-item">
+            <strong class="impact-value">{{ item.value }}</strong>
+            <span class="impact-label">{{ item.label }}</span>
+        </div>
+        {% endfor %}
+    </section>
+
+    {% set projects = get_section(path="projects/_index.md") %}
+    {% set project_pages = projects.pages | sort(attribute="date") | reverse %}
+    <section class="home-section" aria-labelledby="selected-work-heading">
+        <div class="section-heading-row">
+            <div>
+                <p class="eyebrow">Engineering</p>
+                <h2 id="selected-work-heading">Selected work</h2>
+            </div>
+            <a class="text-link" href="{{ projects.permalink }}">All projects</a>
+        </div>
+        <div class="work-grid">
+            {% for project in project_pages | slice(end=2) %}
+            {{ page_macros::project_listing(page=project, heading_level=3) }}
+            {% endfor %}
+        </div>
+    </section>
+
+    {% set blog = get_section(path="blog/_index.md") %}
+    {% set blog_pages = blog.pages | sort(attribute="date") | reverse %}
+    <section class="home-section" aria-labelledby="writing-heading">
+        <div class="section-heading-row">
+            <div>
+                <p class="eyebrow">Field notes</p>
+                <h2 id="writing-heading">Writing</h2>
+            </div>
+            <a class="text-link" href="{{ blog.permalink }}">All writing</a>
+        </div>
+        <div class="writing-list">
+            {% for post in blog_pages | slice(end=3) %}
+            {{ page_macros::page_listing(page=post, heading_level=3) }}
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="home-section about-preview-grid" aria-labelledby="about-preview-heading">
+        <div class="about-preview-copy">
+            <p class="eyebrow">Beyond the architecture diagram</p>
+            <h2 id="about-preview-heading">Engineer, builder, gardener.</h2>
+            <p>{{ config.extra.profile.about_preview }}</p>
+            <a class="text-link" href="{{ get_url(path="about/") }}">More about Jordan</a>
+        </div>
+        {% set banner = resize_image(path="/static/banner.jpg", width=900, op="fit_width") %}
+        <img class="bison-photo" src="{{ banner.url }}" width="900" height="435" loading="lazy" alt="A bison standing in tawny prairie grass beneath a muted sky.">
+    </section>
+
+    <section class="home-section" aria-labelledby="contact-heading">
+        <p class="eyebrow">Get in touch</p>
+        <h2 id="contact-heading">Let’s talk about the system behind the product.</h2>
+        <p>For engineering conversations, project questions, or collaboration, email is the most direct route.</p>
+        <a class="button-link primary" href="mailto:{{ config.extra.profile.email }}">Email Jordan</a>
+    </section>
+</main>
+{% endblock content %}

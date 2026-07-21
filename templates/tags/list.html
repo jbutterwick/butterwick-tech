@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="main-content" class="listing-page" tabindex="-1">
+    <p class="eyebrow">Browse the archive</p>
+    <h1>{{ trans(key="tags", lang=lang) }}</h1>
+    <ul class="terms">
+        {% for term in terms %}<li><a href="{{ term.permalink }}">#{{ term.name }}</a> <span>({{ term.pages | length }})</span></li>{% endfor %}
+    </ul>
+</main>
+{% endblock content %}

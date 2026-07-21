@@ -1,0 +1,21 @@
+{
+  "name": "Jordan Butterwick — Senior Software Engineer",
+  "short_name": "butterwick.tech",
+  "description": "Senior software engineer building reliable production systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111714",
+  "theme_color": "#111714",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

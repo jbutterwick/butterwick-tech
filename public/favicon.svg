@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">butterwick.tech monogram</title>
+  <rect width="64" height="64" rx="12" fill="#111714"/>
+  <path d="M16 15v34h17c9 0 15-4.7 15-12 0-4.8-2.6-8.2-7.1-9.8C44.1 25.5 46 22.7 46 19c0-7-5.5-11-14.3-11H23v7h8.4c4.5 0 6.6 1.5 6.6 4.6 0 3.2-2.2 4.7-6.8 4.7H23V15h-7Zm7 16.3h9.3c5.1 0 7.6 1.8 7.6 5.4 0 3.7-2.6 5.5-7.8 5.5H23V31.3Z" fill="#8dd3b5"/>
+</svg>
